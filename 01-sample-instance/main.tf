@@ -5,7 +5,7 @@ provider "google" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-    name = "tf-generated-instance-1"
+    name = "tf-generated-instance"
     machine_type = "f1-micro"
     
     scheduling {
