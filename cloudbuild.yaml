@@ -1,6 +1,6 @@
 steps:
 - id: 'tf init'
-  name: 'hashicorp/terraform:0.12.0'
+  name: 'hashicorp/terraform:0.12.24'
   entrypoint: 'sh'
   args:
       - '-c'
@@ -9,7 +9,7 @@ steps:
         terraform init
 
 - id: 'tf plan'
-  name: 'hashicorp/terraform:0.12.0'
+  name: 'hashicorp/terraform:0.12.24'
   entrypoint: 'sh'
   args:
     - '-c'
