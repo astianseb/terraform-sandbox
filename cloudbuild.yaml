@@ -1,15 +1,18 @@
+steps:
 - id: 'tf init'
-name: 'hashicorp/terraform:0.12.0'
-entrypoint: 'sh'
-args:
-    - '-c'
-    - |
-    ./01-sample-instance/terraform init
+  name: 'hashicorp/terraform:0.12.0'
+  entrypoint: 'sh'
+  args:
+      - '-c'
+      - |
+        cd ./01-sample-instance
+        terraform init
 
 - id: 'tf plan'
-name: 'hashicorp/terraform:0.12.0'
-entrypoint: 'sh'
-args:
+  name: 'hashicorp/terraform:0.12.0'
+  entrypoint: 'sh'
+  args:
     - '-c'
     - |
-    ./01-sample-instance/terraform plan
+      cd ./01-sample-instance
+      terraform plan
