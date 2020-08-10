@@ -3,7 +3,7 @@
   entrypoint: 'sh'
   args: 
   - '-c'
-  - | 
-        cd 01-sample-instance
-        terraform plan
-     
+  - |
+        if [ -d "01-sample-instance" ]; then
+            cd 01-sample-instance
+            terraform plan
