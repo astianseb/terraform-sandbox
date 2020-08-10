@@ -16,3 +16,12 @@ steps:
     - |
       cd ./01-sample-instance
       terraform plan
+
+- id: 'tf deploy'
+  name: 'hashicorp/terraform:0.12.24'
+  entrypoint: 'sh'
+  args:
+    - '-c'
+    - |
+      cd ./01-sample-instance
+      terraform deploy
