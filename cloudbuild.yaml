@@ -24,4 +24,4 @@ steps:
     - '-c'
     - |
       cd ./01-sample-instance
-      terraform deploy
+      terraform apply -auto-approve
